@@ -1,7 +1,7 @@
 # Entregable1-Palacios
 Repositorio creado para entregas del curso de JavaScript en CoderHouse
 <h1 align="center">Hi 👋, I'm Lucas Palacios</h1>
-<h3 align="center">A passionate frontend developer from Argentina</h3>
+<h3 align="center">A passionate full-stack developer from Argentina</h3>
 
 - 🔭 I’m currently working on **E-Comerc Proyecto Personal** and **Entregas JavaScript CoderHouse**
 
