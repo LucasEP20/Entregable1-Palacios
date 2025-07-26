@@ -1,0 +1,55 @@
+/* Estilos básicos para el cuerpo y el main (si no los tienes) */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center; /* Centra el texto en general */
+}
+
+main {
+  max-width: 800px; /* Limita el ancho del contenido principal */
+  margin: 20px auto; /* Centra el contenedor principal */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2,
+h3 {
+  color: #0056b3;
+}
+
+/* Estilos para el contenedor de los equipos */
+.equipos-container {
+  display: flex; /* Usa Flexbox para alinear los elementos internos */
+  justify-content: center; /* Centra los elementos horizontalmente en el contenedor */
+  gap: 50px; /* Espacio entre los dos equipos */
+  margin-top: 30px; /* Espacio superior */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas si es necesario */
+}
+
+.equipos-container > div {
+  /* Estilos opcionales para cada columna de equipo */
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  min-width: 250px; /* Ancho mínimo para cada columna de equipo */
+}
+
+/* Centrar el texto dentro de cada sección de equipo */
+.equipos-container h3,
+.equipos-container ul {
+  text-align: center; /* Centra los encabezados y la lista */
+  list-style-position: inside; /* Mantiene las viñetas dentro del área de la lista */
+  padding-left: 0; /* Elimina el padding por defecto de la lista para centrar mejor */
+}
+
+/* Opcional: Estilo para los elementos de la lista */
+.equipos-container ul li {
+  margin-bottom: 5px;
+}

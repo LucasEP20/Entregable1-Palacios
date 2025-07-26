@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entregable 1 - Palacios</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Bienvenido a mi simulador de partido de futbol</h1>
+    </header>
+    <main>
+      <h2>Partido Simulado</h2>
+      <script src="./simulador.js"></script>
+      <p id="resultado"></p>
+
+      <script>
+        document.getElementById("resultado").innerText = simularPartido();
+
+        function obtenerJugadores(equipoObj) {
+          const jugadoresList = [...equipoObj.jugadores];
+          if (jugadoresList.length > 0) {
+            jugadoresList[0] = jugadoresList[0] + " (Capitán)";
+          }
+          return jugadoresList;
+        }
+
+        function renderizarListaJugadores(equipo, idElementoHtml) {
+          const listaContainer = document.getElementById(idElementoHtml);
+          const ul = document.createElement("ul");
+
+          equipo.forEach((jugador) => {
+            const li = document.createElement("li");
+            li.textContent = jugador;
+            ul.appendChild(li);
+          });
+
+          listaContainer.appendChild(ul);
+        }
+      </script>
+
+      <section class="equipos-container">
+        <div>
+          <h3>Jugadores del Equipo A</h3>
+          <div id="jugadoresEquipoA"></div>
+        </div>
+
+        <div>
+          <h3>Jugadores del Equipo B</h3>
+          <div id="jugadoresEquipoB"></div>
+        </div>
+      </section>
+      <script>
+        const listaJugadoresA = obtenerJugadores(equipoA);
+        renderizarListaJugadores(listaJugadoresA, "jugadoresEquipoA");
+
+        const listaJugadoresB = obtenerJugadores(equipoB);
+        renderizarListaJugadores(listaJugadoresB, "jugadoresEquipoB");
+      </script>
+    </main>
+  </body>
+</html>
