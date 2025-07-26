@@ -1,4 +1,4 @@
-/* Estilos básicos para el cuerpo y el main (si no los tienes) */
+/* Estilos básicos para el cuerpo y el main */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -23,13 +23,56 @@ h3 {
   color: #0056b3;
 }
 
-/* Estilos para el contenedor de los equipos */
+/* Estilos para el párrafo descriptivo del simulador */
+.descripcion-simulador {
+  max-width: 600px; /* Limita el ancho del párrafo para mejor legibilidad */
+  margin: 15px auto 30px auto; /* Centra el párrafo y le da margen superior e inferior */
+  line-height: 1.6; /* Mejora la legibilidad del texto aumentando el espaciado entre líneas */
+  font-size: 1.1em; /* Un poco más grande que el tamaño de fuente base */
+  color: #555; /* Un gris un poco más suave que el texto principal, si lo deseas */
+  text-align: center; /* Asegura que el texto esté centrado */
+}
+
+/* Estilos para el contenedor de los goleadores */
+.goleadores-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px; /* Un poco menos de margen superior que los equipos */
+  margin-bottom: 30px; /* Para separarlo de los equipos */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea en pantallas pequeñas */
+}
+
+.goleadores-container > div {
+  /* Estilos opcionales para cada columna de goleadores */
+  padding: 15px;
+  border: 1px dashed #ccc; /* Un borde diferente para distinguirlos */
+  border-radius: 5px;
+  background-color: #ffe; /* Un color de fondo diferente */
+  min-width: 250px;
+}
+
+/* Centrar el texto dentro de cada sección de goleadores */
+.goleadores-container h3,
+.goleadores-container ul {
+  text-align: center;
+  list-style-position: inside; /* Mantiene las viñetas dentro del área de la lista */
+  padding-left: 0; /* Elimina el padding por defecto de la lista para centrar mejor */
+}
+
+/* Opcional: Estilo para los elementos de la lista de goleadores */
+.goleadores-container ul li {
+  margin-bottom: 3px;
+  font-weight: bold; /* Para que los goleadores destaquen un poco */
+}
+
+/* Estilos para el contenedor de los equipos (jugadores completos) */
 .equipos-container {
   display: flex; /* Usa Flexbox para alinear los elementos internos */
   justify-content: center; /* Centra los elementos horizontalmente en el contenedor */
   gap: 50px; /* Espacio entre los dos equipos */
   margin-top: 30px; /* Espacio superior */
-  flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas si es necesario */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea en pantallas pequeñas */
 }
 
 .equipos-container > div {
@@ -41,7 +84,7 @@ h3 {
   min-width: 250px; /* Ancho mínimo para cada columna de equipo */
 }
 
-/* Centrar el texto dentro de cada sección de equipo */
+/* Centrar el texto dentro de cada sección de equipo (jugadores completos) */
 .equipos-container h3,
 .equipos-container ul {
   text-align: center; /* Centra los encabezados y la lista */
@@ -49,7 +92,7 @@ h3 {
   padding-left: 0; /* Elimina el padding por defecto de la lista para centrar mejor */
 }
 
-/* Opcional: Estilo para los elementos de la lista */
+/* Opcional: Estilo para los elementos de la lista de jugadores */
 .equipos-container ul li {
   margin-bottom: 5px;
 }
