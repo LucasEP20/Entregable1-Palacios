@@ -10,36 +10,31 @@
   <body>
     <header>
       <h1>Bienvenido a mi simulador de partido de futbol</h1>
+      <p class="descripcion-simulador">
+        Esta pagina te permite simular un parido de futbol ficticio entre los
+        equipos que tu elijas. Puedes elegir el nombre del equipo que quieras, y
+        el simulador te mostrara el resultado del partido, los goleadores y los
+        jugadores de cada equipo. El partido se simula de manera aleatoria, por
+        lo que cada vez que lo ejecutes, el resultado puede ser diferente. El
+        simulador utiliza un algoritmo que asigna una probabilidad de gol a cada
+        jugador.
+      </p>
     </header>
     <main>
       <h2>Partido Simulado</h2>
       <script src="./simulador.js"></script>
       <p id="resultado"></p>
 
-      <script>
-        document.getElementById("resultado").innerText = simularPartido();
-
-        function obtenerJugadores(equipoObj) {
-          const jugadoresList = [...equipoObj.jugadores];
-          if (jugadoresList.length > 0) {
-            jugadoresList[0] = jugadoresList[0] + " (Capitán)";
-          }
-          return jugadoresList;
-        }
-
-        function renderizarListaJugadores(equipo, idElementoHtml) {
-          const listaContainer = document.getElementById(idElementoHtml);
-          const ul = document.createElement("ul");
-
-          equipo.forEach((jugador) => {
-            const li = document.createElement("li");
-            li.textContent = jugador;
-            ul.appendChild(li);
-          });
-
-          listaContainer.appendChild(ul);
-        }
-      </script>
+      <section class="goleadores-container">
+        <div>
+          <h3>Goleadores Equipo A</h3>
+          <div id="goleadoresEquipoA"></div>
+        </div>
+        <div>
+          <h3>Goleadores Equipo B</h3>
+          <div id="goleadoresEquipoB"></div>
+        </div>
+      </section>
 
       <section class="equipos-container">
         <div>
@@ -52,12 +47,53 @@
           <div id="jugadoresEquipoB"></div>
         </div>
       </section>
+
       <script>
+        const obtenerJugadores = (equipoObj) => {
+          const jugadoresList = [...equipoObj.jugadores];
+          if (jugadoresList.length > 0) {
+            jugadoresList[0] = jugadoresList[0] + " (Capitán)";
+          }
+          return jugadoresList;
+        };
+        const renderizarListaJugadores = (equipo, idElementoHtml) => {
+          const listaContainer = document.getElementById(idElementoHtml);
+          listaContainer.innerHTML = "";
+          const ul = document.createElement("ul");
+
+          if (equipo.length === 0) {
+            const li = document.createElement("li");
+            li.textContent = "No hubo goles.";
+            ul.appendChild(li);
+          } else {
+            equipo.forEach((jugador) => {
+              const li = document.createElement("li");
+              li.textContent = jugador;
+              ul.appendChild(li);
+            });
+          }
+          listaContainer.appendChild(ul);
+        };
+
+        const resultadoPartido = simularPartido(); // Simula el partido
+
+        document.getElementById("resultado").innerText =
+          resultadoPartido.resultado;
+
         const listaJugadoresA = obtenerJugadores(equipoA);
         renderizarListaJugadores(listaJugadoresA, "jugadoresEquipoA");
 
         const listaJugadoresB = obtenerJugadores(equipoB);
         renderizarListaJugadores(listaJugadoresB, "jugadoresEquipoB");
+
+        renderizarListaJugadores(
+          resultadoPartido.goleadoresA,
+          "goleadoresEquipoA"
+        );
+        renderizarListaJugadores(
+          resultadoPartido.goleadoresB,
+          "goleadoresEquipoB"
+        );
       </script>
     </main>
   </body>
