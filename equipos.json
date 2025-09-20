@@ -1,0 +1,98 @@
+[
+  {
+    "nombre": "Real Madrid",
+    "jugadores": [
+      "Courtois",
+      "Carvajal",
+      "Militao",
+      "Alaba",
+      "Mendy",
+      "Kroos",
+      "Modric",
+      "Casemiro",
+      "Valverde",
+      "Benzema",
+      "Vinicius Jr."
+    ]
+  },
+  {
+    "nombre": "Barcelona",
+    "jugadores": [
+      "Ter Stegen",
+      "Dest",
+      "Piqué",
+      "Araújo",
+      "Alba",
+      "Busquets",
+      "Pedri",
+      "Gavi",
+      "Depay",
+      "Ansu Fati",
+      "Aubameyang"
+    ]
+  },
+  {
+    "nombre": "Liverpool",
+    "jugadores": [
+      "Alisson",
+      "Alexander-Arnold",
+      "Van Dijk",
+      "Matip",
+      "Robertson",
+      "Fabinho",
+      "Henderson",
+      "Thiago",
+      "Mané",
+      "Salah",
+      "Firmino"
+    ]
+  },
+  {
+    "nombre": "Manchester United",
+    "jugadores": [
+      "De Gea",
+      "Dalot",
+      "Varane",
+      "Maguire",
+      "Shaw",
+      "McTominay",
+      "Fred",
+      "Bruno Fernandes",
+      "Sancho",
+      "Rashford",
+      "Ronaldo"
+    ]
+  },
+  {
+    "nombre": "Paris Saint-Germain",
+    "jugadores": [
+      "Donnarumma",
+      "Hakimi",
+      "Marquinhos",
+      "Kimpembe",
+      "Nuno Mendes",
+      "Verratti",
+      "Gueye",
+      "Paredes",
+      "Messi",
+      "Neymar",
+      "Mbappé"
+    ]
+  },
+  {
+    "nombre": "Bayern Múnich",
+    "jugadores": [
+      "Neuer",
+      "Pavard",
+      "Upamecano",
+      "Hernández",
+      "Davies",
+      "Kimmich",
+      "Goretzka",
+      "Müller",
+      "Sané",
+      "Coman",
+      "Lewandowski"
+    ]
+  }
+]
